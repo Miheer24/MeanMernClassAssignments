@@ -1,0 +1,13 @@
+<html>
+<head>
+<title>Area Of a Circle </title>
+</head>
+<body>
+<script>
+var radius = parseFloat(prompt("Enter the radius"));
+CONST pi =3.14;
+var Area= pi*(radius^2);
+documents.writeln(Area);
+</script>
+</body>
+</html>

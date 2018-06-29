@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>
+Area of Triangle using Heron's Formula
+</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var side1;
+		var side2;
+		var side3;
+		var s;
+		var Area;
+		var perimeter;
+		side1=parseFloat(prompt("Enter first side"));
+		side2=parseFloat(prompt("Enter second side"));
+		side3=parseFloat(prompt("Enter third side"));
+		s=(side1+side2+side3)/2;
+		perimeter= s*2;
+		Area= Math.sqrt(s*(s-side1)*(s-side2)*(s-side3));
+		// alert("Area of triangle is"+Area);
+		// alert("perimeter of triangle is"+perimeter);
+		document.writeln("Area is"+Area + "<br>");
+		document.writeln("perimeter is"+perimeter+"<br>");
+
+
+
+	</script>
+</body>
+</html>

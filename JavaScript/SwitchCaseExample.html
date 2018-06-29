@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>
+Calculator
+</title>
+</head>
+<body>
+<script>
+	var a= parseInt(prompt("Enter the first no."));
+	var b= parseInt(prompt("Enter the second no."));
+	var c= prompt("Choose one of these operator as +,-,*,/");
+	var choice;
+	do{
+		switch(c){
+		case '+':
+			document.writeln("The sum of the no.'s is"+ (a+b));
+			break;
+		case '-':
+			document.writeln("The difference of the no.'s is"+(a-b));
+			break;
+		case '*':
+			document.writeln("The product of the no.'s is"+(a*b));
+			break;
+		case '/':
+			document.writeln("The division of the no.'s is"+(a/b));
+			break;
+		default:
+			document.writeln("You have selected a wrong operator");
+	}
+	  		
+	  		
+	choice=prompt("Do you want to perform the operation again");
+	while(choice=='y'|| choice=='Y'){
+		
+	}
+
+	
+
+	}
+	
+</script>
+</body>
+</html>
+

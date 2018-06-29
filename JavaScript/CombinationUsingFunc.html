@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>
+Calculator
+</title>
+</head>
+<body>
+<script>
+function fact(factnum)
+{
+	var factorial=1;
+	for(var i=1;i<=factnum; i++)
+	{
+		
+		factorial=factorial*i;
+	}
+	return factorial;
+}
+
+  function combn(n,r)
+  { 
+  	 	var x= fact(n);
+ 	var y= fact(r);
+ 	var z= fact(n-r);
+ 	var combin= (x/(y*z));
+ 	return combin;
+ }
+
+ var n=parseInt(prompt("enter the no n"));
+ var r=parseInt(prompt("enter the no r"));
+
+ var e= combn(n,r);
+ alert(e);
+
+
+
+</script>
+</body>
+</html>
