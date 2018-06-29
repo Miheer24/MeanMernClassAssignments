@@ -1,0 +1,30 @@
+1. Created primary key while
+
+2. db.BankCustomerDetails.createIndex({"_accNo":1},{unique: true})
+
+3.db.BankCustomerDetails.find({"CustomerDetails.loanAmount":{$gt:0}},{"CustomerDetails.CustomerName":1, "CustomerDetails.city":1}).pretty()
+
+4.db.BankCustomerDetails.find({$and:[{"CustomerDetails.loanAmount":{$gt:0}},{"CustomerDetails.city":"Chennai"}]},{"CustomerDetails.CustomerName":1}).pretty()
+
+5.i. db.BankCustomerDetails.find({},{"CustomerDetails.CustomerName":1, "CustomerDetails.city":1, "BranchDetails.assets":1}).sort({"BranchDetails.assets":-1}).pretty()
+
+  ii. db.BankCustomerDetails.find({},{"CustomerDetails.CustomerName":1, "CustomerDetails.city":1, "BranchDetails.assets":1}).sort({"BranchDetails.assets":-1}).limit(1).pretty()
+6.db.BankCustomerDetails.find({$and:[{"CustomerDetails.loanAmount":{$gt:0}}, {"CustomerDetails.city":"Pune"}]},{"CustomerDetails.CustomerName":1, "CustomerDetails.city":1})
+
+7.db.BankCustomerDetails.find({$and:[{Balance:{$gt:700}} , {Balance:{$lt:900}}]}).count()
+
+8.db.BankCustomerDetails.find({$and:[{"CustomerDetails.loanAmount":{$gt:0}} ,{"CustomerDetails.depositAmount":{$gt:0}} ,{"CustomerDetails.city":"Pune"}]},{CustomerDetails.CustomerName":1}).pretty()
+
+9.db.BankCustomerDetails.find({$expr:{$gt:["$CustomerDetails.loanAmount", "$Balance"]}},{"CustomerDetails.CustomerName":1})
+
+10.db.BankCustomerDetails.find({"CustomerDetails.street": {$regex : "hill$"}}, {"CustomerDetails.CustomerName":1}).pretty()
+
+11.db.BankCustomerDetails.find({$and:[{"CustomerDetails.depositAmount":{$gt:0}},{"CustomerDetails.loanAmount":0}, {"CustomerDetails.city":"Pune"}]},{"CustomerDetails.CustomerName":1}).pretty()
+
+12.
+
+13.
+
+14. 
+
+15. db.BankCustomerDetails.update({"CustomerDetails.CustomerName":"Ram"},{$inc:{Balance: + 20000}})
